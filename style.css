@@ -1,0 +1,155 @@
+:root {
+    --bg-blue: #2c00e0;
+    --near-black: #121212;
+    --accent-blue: #472FFF;
+    --text-light: #EAEAEA;
+    --text-dark: #121212;
+    --border-color: #333333;
+    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Roboto', sans-serif;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-blue);
+    font-family: var(--font-body);
+    color: var(--text-light);
+}
+
+.header-container, .footer-container, main.site-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.site-header {
+    background-color: var(--near-black);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text a {
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-blue);
+}
+
+/* Main section stuff */
+
+.hero-section {
+    background-color: var(--near-black);
+    margin-top: 3rem;
+    padding: 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-left, .hero-right {
+    flex: 1;
+    text-align: center;
+}
+
+.team-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-blue);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.team-logo {
+    max-width: 200px;
+    margin: 1rem 0;
+}
+
+.team-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--accent-blue);
+    font-family: var(--font-heading);
+}
+
+.robot-image {
+    width: 100%; 
+    border-radius: 12px;
+    display: block; 
+}
+
+.robot-link {
+    display: inline-block; 
+    margin-top: 1.5rem;
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.robot-link:hover {
+    transform: scale(1.05); 
+}
+
+
+
+
+.sponsors-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.sponsors-slider {
+    background-color: var(--near-black);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.sponsor-logo-placeholder {
+    background-color: #333;
+    width: 200px;
+    height: 100px;
+    border-radius: 8px;
+}
