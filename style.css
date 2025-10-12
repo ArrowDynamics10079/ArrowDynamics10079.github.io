@@ -7,7 +7,6 @@
     --border-color: #333333;
     --font-body: 'Inter', sans-serif;
     --font-heading: 'Roboto', sans-serif;
-
 }
 
 * {
@@ -20,6 +19,9 @@ body {
     background-color: var(--bg-blue);
     font-family: var(--font-body);
     color: var(--text-light);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header-container, .footer-container, main.site-content {
@@ -30,8 +32,10 @@ body {
 
 .site-header {
     background-color: var(--near-black);
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     border-bottom: 1px solid var(--border-color);
+    position: relative; 
+    z-index: 100;
 }
 
 .header-container {
@@ -47,23 +51,51 @@ body {
     font-weight: 800;
 }
 
-.main-nav {
+.site-nav {
     display: flex;
-    gap: 2rem;
+    align-items: center;
+    gap: 1.5rem; 
 }
 
-.main-nav a {
+.site-nav a {
     color: var(--text-light);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s ease;
+    padding: 0.5rem 0.25rem; 
+    position: relative; 
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
 }
 
-.main-nav a:hover {
-    color: var(--accent-blue);
+.site-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-blue);
+    transform: scaleX(0); 
+    transform-origin: center;
+    transition: transform 0.3s ease-out;
 }
 
-/* Main section stuff */
+.site-nav a:hover {
+    opacity: 1;
+}
+
+.site-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.site-nav a.active {
+    opacity: 1;
+    font-weight: 700;
+}
+
+.site-nav a.active::after {
+    transform: scaleX(1);
+}
 
 .hero-section {
     background-color: var(--near-black);
@@ -72,7 +104,6 @@ body {
     border-radius: 16px;
     border: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -123,29 +154,90 @@ body {
     transform: scale(1.05); 
 }
 
-
-
-
 .sponsors-section {
+    padding: 4rem 0;
     text-align: center;
-    padding: 2rem 0;
 }
 
 .section-title {
     font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
     letter-spacing: 2px;
 }
 
 .sponsors-slider {
     background-color: var(--near-black);
-    padding: 2rem;
+    padding: 2rem 0;
     border: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-around;
-    gap: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
+
+.slider-track {
+    display: flex;
+    width: calc(250px*10);
+    animation: scroll 30s linear infinite;
+}
+
+.slide {
+    width: 250px;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img {
+    max-width: 150px;
+    height: auto;
+
+    opacity: 0.7;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+
+    border-radius: 8px;
+}
+
+.slide:hover img {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+.sponsors-slider:hover .slider-track {
+    animation-play-state: paused;
+}
+
+.sponsors-slider::before,
+.sponsors-slider::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+}
+
+.sponsors-slider::before {
+    left: 0;
+    background: linear-gradient(to right, var(--near-black) 0%, rgba(18,18,18,0) 100%);
+}
+
+.sponsors-slider::after {
+    right: 0;
+    background: linear-gradient(to left, var(--near-black) 0%, rgba(18,18,18,0) 100%);
+}
+
 
 .sponsor-logo-placeholder {
     background-color: #333;
@@ -153,3 +245,38 @@ body {
     height: 100px;
     border-radius: 8px;
 }
+
+.site-footer-bottom {
+    background-color: var(--near-black);
+    border-top: 1px solid var(--border-color);
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon img {
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover img {
+    opacity: 1;
+}
+
+.copyright-text {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.content-wrap {
+    flex: 1;
+}
+
