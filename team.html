@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Our Team | ArrowDynamics</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-wrap">
+        <header class="site-header">
+            <div class="header-container">
+                <div class="logo-text">
+                    <a href="index.html">Bothell Robotics</a>
+                </div>
+                <nav class="site-nav">
+                    <a href="index.html">Home</a>
+                    <a href="team.html" class="active">Team</a>
+                    <a href="#">Events</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Calendar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-content">
+            <section class="team-hero">
+                <h1>Meet The Team</h1>
+                <p>The students, mentors, and minds behind the robot.</p>
+            </section>
+
+            <section class="leads-section">
+                <h2 class="section-heading">Leadership</h2>
+                <div class="team-grid">
+                    <div class="member-card">
+                        <img src="images/Adrian-Image.jpg" alt="Team Member Adrian">
+                        <h4>Adrian</h4>
+                        <p class="member-role">President</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/Risith-Image.jpg" alt="Team Member Risith">
+                        <h4>Risith</h4>
+                        <p class="member-role">Software Lead</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/Kiet-Image.jpg" alt="Team Member Kiet">
+                        <h4>Kiet</h4>
+                        <p class="member-role">Hardware Lead</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="subteam-section">
+                <h2 class="section-heading">Software Team</h2>
+                <button class="cta-button modal-open-btn" data-modal-target="#software-modal">View All Members</button>
+            </section>
+
+            <section class="subteam-section">
+                <h2 class="section-heading">Hardware Team</h2>
+                <button class="cta-button modal-open-btn" data-modal-target="#hardware-modal">View All Members</button>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer-bottom">
+        <div class="footer-container">
+            <a href="#" class="social-icon">
+                <img src="images/instagram-icon.svg" alt="Instagram">
+            </a>
+            <p class="copyright-text">&copy; 2025 Team 10079 Robotics | Contact: bothellroboticsemailprobably</p>
+        </div>
+    </footer>
+
+
+    <div class="modal" id="software-modal">
+        <div class="modal-overlay modal-close-btn"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Software Team</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="team-grid">
+                    <div class="member-card">
+                        <img src="images/Risith-Image.jpg" alt="Team Member Risith">
+                        <h4>Risith</h4>
+                        <p class="member-role">Software Lead</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/Nethul-Image.jpg" alt="Nethul">
+                        <h4>Nethul</h4>
+                        <p class="member-role">Software and Website Developer</p>
+                    </div>
+                    <div class="member-card">
+                        <img src="images/dhruv-image.jpg" alt="Team Member Dhruv">
+                        <h4>Dhruv</h4>
+                        <p class="member-role">Software</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="hardware-modal">
+        <div class="modal-overlay modal-close-btn"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Hardware Team</h3>
+                <button class="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="team-grid">
+                    <div class="member-card">
+                        <img src="images/Kiet-Image.jpg" alt="Team Member Kiet">
+                        <h4>Kiet</h4>
+                        <p class="member-role">Hardware Lead</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="script.js"></script>
+</body>
+</html>
