@@ -471,3 +471,51 @@
     height: 100%;
     cursor: pointer;
   }
+
+  .member-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+.member-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.member-list li:last-child {
+    border-bottom: none; 
+}
+
+
+.member-list h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin: 0;
+}
+
+.member-list .member-role {
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+    max-width: none;
+}
+
+
+@media (max-width: 600px) {
+    .member-list {
+        column-count: 1; 
+    }
+}
+
+.team-grid.modal-leads {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 2rem;
+}
+
