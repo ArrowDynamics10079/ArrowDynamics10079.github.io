@@ -27,14 +27,22 @@
   .content-wrap {
     flex: 1;
   }
-  
-  .header-container,
-  .footer-container,
-  main.site-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+
+.header-container, .footer-container, main.site-content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+
+@media (max-width: 768px) {
+  .header-container, .footer-container, main.site-content {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
   }
+}
   
   .site-header {
     background-color: var(--near-black);

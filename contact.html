@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | ArrowDynamics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Roboto:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="content-wrap">
+        <header class="site-header">
+            <div class="header-container">
+                <div class="logo-text">
+                    <a href="index.html">Bothell Robotics</a>
+                </div>
+                <nav class="site-nav">
+                    <a href="index.html">Home</a>
+                    <a href="team.html">Team</a>
+                    <a href="events.html">Events</a>
+                    <a href="resources.html">Resources</a>
+                    <a href="contact.html" class="active">Contact</a>
+                    <a href="calendar.html">Calendar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-content">
+            <section class="page-hero">
+                <h1>Get In Touch</h1>
+                <p>Have questions, want to become a sponsor, or interested in joining? Reach out to us.</p>
+            </section>
+
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <strong>General Inquiries</strong>
+                        <p>roboticsemailplaceholder</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <strong>Our Location</strong>
+                        <p>Bothell High School<br>Bothell, WA 98011</p>
+                    </div>
+                    <div class="info-item social-links-contact">
+                        <strong>Follow Us</strong>
+                        <a href="#">Instagram</a>
+                        <a href="#">YouTube</a>
+                        
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formspree.io/f/manlebze" method="POST">
+                    <h3>Send Us a Message</h3>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2680.893604158485!2d-122.20392068436328!3d47.76616497919561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54900e393962696b%3A0x828275323267591e!2sBothell%20High%20School!5e0!3m2!1sen!2sus!4v1668632345678" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </main>
+    </div>
+
+    <footer class="site-footer-bottom">
+        <div class="footer-container">
+            <a href="#" class="social-icon">
+                <img src="images/instagram-icon.svg" alt="Instagram">
+            </a>
+            <p class="copyright-text">&copy; 2025 Team 10079 Robotics | Contact: bothellroboticsemailprobably</p>
+        </div>
+    </footer>
+    <script src="contact.js"></script>
+</body>
+</html>
