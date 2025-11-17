@@ -13,10 +13,12 @@
     font-size: 3.5rem;
     font-weight: 900;
 }
+
 .page-hero p {
     font-size: 1.2rem;
-    color: var(--accent-blue);
-    max-width: none;
+    color: var(--hero-subtitle-color); 
+    max-width: 650px; 
+    margin: 0 auto; 
 }
 
 .events-container {
@@ -80,27 +82,8 @@
     font-weight: 600;
 }
 
-.event-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: auto; 
-}
 
-.secondary-button {
-    display: inline-block;
-    background-color: transparent;
-    color: var(--accent-blue);
-    padding: 0.75rem 1.5rem;
-    border: 2px solid var(--accent-blue);
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.secondary-button:hover {
-    background-color: var(--accent-blue);
-    color: var(--near-black);
-}
+
 
 .events-archive {
     display: flex;

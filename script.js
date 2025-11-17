@@ -42,3 +42,22 @@ modalCloseButtons.forEach(button => {
         closeModal(modal);
     });
 });
+
+
+
+const backToTopButton = document.querySelector('.back-to-top-btn');
+
+
+const handleScroll = () => {
+
+    if (window.scrollY > 300) {
+     
+        backToTopButton.classList.add('active');
+    } else {
+  
+        backToTopButton.classList.remove('active');
+    }
+};
+
+
+window.addEventListener('scroll', handleScroll);
