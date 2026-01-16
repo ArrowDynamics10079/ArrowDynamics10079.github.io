@@ -135,3 +135,41 @@
     background-color: #bdc3c7;
     color: var(--near-black);
 }
+
+/* Mini Countdown inside Card */
+.event-countdown {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.countdown-label {
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.countdown-mini {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.time-unit {
+    display: flex;
+    align-items: baseline;
+    gap: 0.2rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.time-unit span {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--text-light);
+}
